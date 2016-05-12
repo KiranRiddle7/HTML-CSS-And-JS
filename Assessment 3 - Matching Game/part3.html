@@ -6,22 +6,17 @@
 		 <style type="text/css">
 		 			
 		 			.img {
-
 		 				position: absolute;
-
 		 			}	
-
 		 			#leftSide {
 		 					
 		 				position: absolute;
 		 				width: 500px;
 		 				height: 500px;
 		 			}
-
 		 			#leftSide > img {
 		 				position: absolute;
 		 			}
-
 		 			#rightSide {
 		 				
 		 				position: absolute;
@@ -30,28 +25,19 @@
 		 				left: 500px; 
            			    border-left: 1px solid black
 		 			}
-
-
-
 		 </style>
 		 <script type="text/javascript"> 
-
 		 			var numberofFaces = 5;
-
 		 			function faceGeneration() {
-
 		 						 leftDiv = document.getElementById("leftSide");
 		 						 rightDiv = document.getElementById("rightSide");
 		 			
-
 				 				for (var i = 0; i < numberofFaces; i++) 
-
 				 				{
 				 					var smileImage = document.createElement("img");
 		   							 smileImage.setAttribute("src", "smile.png");
 		   							 
 		   							 
-
 		   							 var randomTop = Math.random() * 400;
 		   							 randomTop = Math.floor(randomTop);
 		   							
@@ -61,17 +47,13 @@
 		   							 smileImage.style.top = randomTop + "px";
 		   							 
 		   							 smileImage.style.left = randomLeft + "px";
-
 		   							 leftDiv.appendChild(smileImage);
-
 				 				}
-
 				 				leftDivImages = leftDiv.cloneNode(true);
 				 				x = leftDivImages.lastChild; // finding the last child in the cloned images 
 				 				leftDivImages.removeChild(x); // removing the last child in the cloned images
 				 				rightDiv = rightDiv.appendChild(leftDivImages); // appending the cloned images to right div after removing the last child
 		 			}
-
 		 </script>
 </head>
 <body onload="faceGeneration()">
