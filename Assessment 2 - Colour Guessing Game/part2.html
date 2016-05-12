@@ -1,0 +1,68 @@
+<html>
+<head> <title>Color Guessing Game</title>
+
+</head>
+
+<body onload="do_game()">
+	
+	<script type="text/javascript">
+	var colors = ["Red","Blue","Green","Black","White","Yellow","Purple"];
+	colors.sort();
+	
+
+	function do_game()
+	{
+		 var maxlength = colors.length;
+		 var random_number = Math.random() * maxlength;
+		 var random_number = Math.floor(random_number); 
+		
+         num_guesses = 0;
+		 target = colors[random_number];
+		 
+
+		 check = false;
+         while(!check) 
+        {
+         	do_check();
+		}
+
+	}
+    
+    
+	function do_check()
+	{
+		 user_guess = prompt("I'm Thinking Of One Of These Colors" + "\n \n" + "Black, Blue, Green, Purple, Red, White, Yellow " + "\n \n" + " What Color Am I Thinking Of ?");
+		 num_guesses++;
+          	
+          	if (colors.indexOf(user_guess) > -1 ) {
+          	if (user_guess==target) 
+          	{
+          		check=true;
+
+          		myBody=document.getElementsByTagName("body")[0];
+				myBody.style.background=target;
+
+          		alert("Congratulations!! Your Guess Is Correct. It Took " +  num_guesses  + " Guesses For You To Guess The Color ");
+          	
+          		
+          	}
+
+          	else if (user_guess>target)
+          	{
+          			alert("Your Guess Is Incorrect." + "\n\n" + "Hint: Your Guess Is Alphabetically Higher Than Mine! Try Again");
+          	}
+          	else if (user_guess<target) 
+          	{
+          			alert("Your Guess Is Alphabetically Lower Than Mine! Try Again");
+          	}
+           }
+          	else {
+          		alert("I Don't Recognize Your Input Color. Please Select From The Listed Colors")
+          	}
+    
+	}
+  
+
+</script>
+</body>
+</html>
