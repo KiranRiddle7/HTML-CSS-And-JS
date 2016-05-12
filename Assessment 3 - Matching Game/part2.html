@@ -9,15 +9,21 @@
 
 		 				position: absolute;
 
-		 			}
+		 			}	
 
 		 			#leftSide {
+		 					
 		 				position: absolute;
 		 				width: 500px;
 		 				height: 500px;
 		 			}
 
+		 			#leftSide > img {
+		 				position: absolute;
+		 			}
+
 		 			#rightSide {
+		 				
 		 				position: absolute;
 		 				width: 500px;
 		 				height: 500px;
@@ -38,11 +44,12 @@
 
 		 						 leftDiv = document.getElementById("leftSide");
 
-				 				for (var i = 0; i <= numberofFaces; i++) 
+				 				for (var i = 0; i < numberofFaces; i++) 
 
 				 				{
 				 					var smileImage = document.createElement("img");
 		   							 smileImage.setAttribute("src", "smile.png");
+		   							 
 		   							 
 
 		   							 var randomTop = Math.random() * 400;
