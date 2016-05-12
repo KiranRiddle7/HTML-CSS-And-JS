@@ -32,11 +32,11 @@
 
 		 			var numberofFaces = 5;
 		 			
-		 			var leftDiv = document.getElementById("leftSide");
-		 			console.log(leftDiv);
 		 			var rightDiv = document.getElementById("rightSide");
 
 		 			function faceGeneration() {
+
+		 						 leftDiv = document.getElementById("leftSide");
 
 				 				for (var i = 0; i <= numberofFaces; i++) 
 
@@ -47,10 +47,10 @@
 
 		   							 var randomTop = Math.random() * 400;
 		   							 randomTop = Math.floor(randomTop);
-		   							 
+		   							 console.log(randomTop)
 		   							 var randomLeft = Math.random() * 400;
 		   							 randomLeft = Math.floor(randomLeft);
-		   							
+		   							console.log(randomLeft)
 
 		   							 smileImage.style.top = randomTop + "px";
 		   							 
